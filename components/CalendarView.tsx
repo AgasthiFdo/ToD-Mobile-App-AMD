@@ -19,20 +19,41 @@ const CalendarView = () => {
   };
 
   
+
   const handleSave = async () => {
-    if (!name || !selectedDate) return;
+      if (!name || !selectedDate) return;
+      
+     
+      await calendarService.saveTaskToFirestore(name, description, selectedDate);
+      
+      
+      setName('');
+      setDescription('');
+      setModalVisible(false);
+      
     
-    await calendarService.saveTaskToFirestore(name, description, selectedDate);
+      const updatedData = await calendarService.fetchTasksByDate(selectedDate);
+      setTasks(updatedData); 
+    };
+
+
+
+
+
+  // const handleSave = async () => {
+  //   if (!name || !selectedDate) return;
+    
+  //   await calendarService.saveTaskToFirestore(name, description, selectedDate);
     
     
-    setName('');
-    setDescription('');
-    setModalVisible(false);
+  //   setName('');
+  //   setDescription('');
+  //   setModalVisible(false);
     
     
-    const updatedData = await calendarService.fetchTasksByDate(selectedDate);
-    setTasks(updatedData);
-  };
+  //   const updatedData = await calendarService.fetchTasksByDate(selectedDate);
+  //   setTasks(updatedData);
+  // };
 
   return (
     <View style={styles.container}>
