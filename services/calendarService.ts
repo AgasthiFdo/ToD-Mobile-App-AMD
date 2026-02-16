@@ -4,7 +4,7 @@ import { collection, addDoc, query, where, getDocs, Timestamp, updateDoc, delete
 const TASKS_COLLECTION = "tasks";
 
 export const calendarService = {
-  // Task එකක් සේව් කිරීම
+  
   async saveTaskToFirestore(name: string, description: string, selectedDate: string) {
     try {
       const taskDate = new Date(selectedDate);
@@ -18,7 +18,7 @@ export const calendarService = {
     }
   },
 
-  // Task එකක් Update කිරීම
+  
   async updateTaskInFirestore(id: string, name: string, description: string) {
     try {
       const taskRef = doc(db, TASKS_COLLECTION, id);
@@ -30,8 +30,7 @@ export const calendarService = {
       console.error("Error updating task: ", e);
     }
   },
-
-  // Task එකක් Delete කිරීම
+  
   async deleteTaskFromFirestore(id: string) {
     try {
       await deleteDoc(doc(db, TASKS_COLLECTION, id));
@@ -40,7 +39,7 @@ export const calendarService = {
     }
   },
 
-  // දිනට අදාළව Tasks ලබා ගැනීම (ID එක සහිතව)
+  
   async fetchTasksByDate(dateString: string) {
     const start = new Date(dateString);
     start.setHours(0, 0, 0, 0);
@@ -54,7 +53,7 @@ export const calendarService = {
     );
 
     const querySnapshot = await getDocs(q);
-    // මෙහිදී doc.id එකද return කරමු
+   
     return querySnapshot.docs.map(doc => ({
       id: doc.id,
       ...doc.data()
