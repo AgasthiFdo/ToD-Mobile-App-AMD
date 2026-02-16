@@ -109,17 +109,61 @@ const CalendarView = () => {
 };
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#fff' },
-  header: { flexDirection: 'row', justifyContent: 'space-between', padding: 20, alignItems: 'center' },
-  dateText: { fontSize: 16, fontWeight: 'bold' },
-  taskItem: { padding: 15, borderBottomWidth: 1, borderColor: '#eee', marginHorizontal: 10, flexDirection: 'row', alignItems: 'center' },
-  taskTitle: { fontSize: 16, fontWeight: '600' },
-  taskSub: { fontSize: 14, color: '#666' },
-  modalContainer: { flex: 1, justifyContent: 'center', backgroundColor: 'rgba(0,0,0,0.5)', padding: 20 },
-  modalBox: { backgroundColor: '#fff', padding: 20, borderRadius: 10 },
-  modalTitle: { fontWeight: 'bold', marginBottom: 15, fontSize: 18, textAlign: 'center' },
-  input: { borderBottomWidth: 1, marginBottom: 15, padding: 5 },
-  editBtn: { marginRight: 15 }
+  container: { 
+    flex: 1, 
+    backgroundColor: '#fff' 
+  },
+  header: { 
+    flexDirection: 'row', 
+    justifyContent: 'space-between', 
+    padding: 20, 
+    alignItems: 'center' 
+  },
+  dateText: { 
+    fontSize: 16, 
+    fontWeight: 'bold' 
+  },
+  taskItem: { 
+    padding: 15, 
+    borderBottomWidth: 1, 
+    borderColor: '#eee', 
+    marginHorizontal: 10, 
+    flexDirection: 'row', 
+    alignItems: 'center' 
+  },
+  taskTitle: { 
+    fontSize: 16, 
+    fontWeight: '600' 
+  },
+  taskSub: { 
+    fontSize: 14, 
+    color: '#666' 
+  },
+  modalContainer: { 
+    flex: 1, 
+    justifyContent: 'center', 
+    backgroundColor: 'rgba(0,0,0,0.5)', 
+    padding: 20 
+  },
+  modalBox: { 
+    backgroundColor: '#fff', 
+    padding: 20, 
+    borderRadius: 10 
+  },
+  modalTitle: { 
+    fontWeight: 'bold', 
+    marginBottom: 15, 
+    fontSize: 18, 
+    textAlign: 'center' 
+  },
+  input: { 
+    borderBottomWidth: 1, 
+    marginBottom: 15, 
+    padding: 5 
+  },
+  editBtn: { 
+    marginRight: 15 
+  }
 });
 
 export default CalendarView;

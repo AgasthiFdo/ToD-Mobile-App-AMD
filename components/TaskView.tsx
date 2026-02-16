@@ -6,7 +6,7 @@ import { taskService, ToDoType } from '../services/taskService';
 
 const TaskView = () => {
   const [todos, setTodos] = useState<ToDoType[]>([]);
-  const [oldTodos, setOldTodos] = useState<ToDoType[]>([]); // Search සඳහා backup එක
+  const [oldTodos, setOldTodos] = useState<ToDoType[]>([]); 
   const [todoText, setTodoText] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -107,16 +107,59 @@ const TaskView = () => {
 };
 
 const styles = StyleSheet.create({
-  container: { flex: 1, padding: 20, backgroundColor: '#f5f5f5' },
-  searchBar: { flexDirection: 'row', backgroundColor: '#fff', padding: 12, borderRadius: 10, alignItems: 'center', marginBottom: 20 },
-  searchInput: { flex: 1, marginLeft: 10 },
-  todoItem: { flexDirection: 'row', justifyContent: 'space-between', backgroundColor: '#fff', padding: 15, borderRadius: 10, marginBottom: 10 },
-  todoInfo: { flexDirection: 'row', alignItems: 'center', gap: 10 },
-  todoText: { fontSize: 16 },
-  doneText: { textDecorationLine: 'line-through', color: '#aaa' },
-  inputRow: { flexDirection: 'row', alignItems: 'center', gap: 10, paddingVertical: 10 },
-  newInput: { flex: 1, backgroundColor: '#fff', padding: 15, borderRadius: 10 },
-  addButton: { backgroundColor: '#4630EB', padding: 10, borderRadius: 10 }
+  container: { 
+    flex: 1, 
+    padding: 20, 
+    backgroundColor: '#f5f5f5' 
+  },
+  searchBar: { 
+    flexDirection: 'row', 
+    backgroundColor: '#fff', 
+    padding: 12, 
+    borderRadius: 10, 
+    alignItems: 'center', 
+    marginBottom: 20 
+  },
+  searchInput: { 
+    flex: 1, 
+    marginLeft: 10 
+  },
+  todoItem: { 
+    flexDirection: 'row', 
+    justifyContent: 'space-between', 
+    backgroundColor: '#fff', 
+    padding: 15, borderRadius: 10, 
+    marginBottom: 10
+   },
+  todoInfo: { 
+    flexDirection: 'row', 
+    alignItems: 'center', 
+    gap: 10 
+  },
+  todoText: { 
+    fontSize: 16 
+  },
+  doneText: { 
+    textDecorationLine: 'line-through', 
+    color: '#aaa' 
+  },
+  inputRow: { 
+    flexDirection: 'row', 
+    alignItems: 'center', 
+    gap: 10, 
+    paddingVertical: 10 
+  },
+  newInput: { 
+    flex: 1, 
+    backgroundColor: '#fff', 
+    padding: 15, 
+    borderRadius: 10 
+  },
+  addButton: { 
+    backgroundColor: '#4630EB', 
+    padding: 10, 
+    borderRadius: 10 
+  }
 });
 
 export default TaskView;

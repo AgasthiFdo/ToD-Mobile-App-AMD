@@ -71,16 +71,65 @@ const NoteView = () => {
 };
 
 const styles = StyleSheet.create({
-  container: { flex: 1, padding: 15, backgroundColor: '#f0f2f5' },
-  formCard: { backgroundColor: '#fff', padding: 15, borderRadius: 12, marginBottom: 20, elevation: 3 },
-  titleInput: { fontSize: 18, fontWeight: 'bold', borderBottomWidth: 1, borderColor: '#eee', marginBottom: 10, paddingVertical: 5 },
-  descInput: { fontSize: 16, height: 60, textAlignVertical: 'top' },
-  saveButton: { backgroundColor: '#007AFF', padding: 12, borderRadius: 8, alignItems: 'center', marginTop: 10 },
-  saveButtonText: { color: '#fff', fontWeight: 'bold' },
-  noteCard: { backgroundColor: '#fff', padding: 15, borderRadius: 10, marginBottom: 10, flexDirection: 'row', alignItems: 'center' },
-  noteTitle: { fontSize: 17, fontWeight: 'bold', color: '#333' },
-  noteDesc: { fontSize: 14, color: '#666', marginTop: 5 },
-  noteDate: { fontSize: 11, color: '#aaa', marginTop: 8 },
+  container: { 
+    flex: 1, 
+    padding: 15, 
+    backgroundColor: '#f0f2f5' 
+  },
+  formCard: { 
+    backgroundColor: '#fff', 
+    padding: 15, 
+    borderRadius: 12, 
+    marginBottom: 20, 
+    elevation: 3 
+  },
+  titleInput: { 
+    fontSize: 18, 
+    fontWeight: 'bold', 
+    borderBottomWidth: 1, 
+    borderColor: '#eee', 
+    marginBottom: 10, 
+    paddingVertical: 5 
+  },
+  descInput: { 
+    fontSize: 16, 
+    height: 60, 
+    textAlignVertical: 'top' 
+  },
+  saveButton: { 
+    backgroundColor: '#007AFF', 
+    padding: 12, 
+    borderRadius: 8, 
+    alignItems: 'center', 
+    marginTop: 10 
+  },
+  saveButtonText: { 
+    color: '#fff', 
+    fontWeight: 'bold' 
+  },
+  noteCard: { 
+    backgroundColor: '#fff', 
+    padding: 15, 
+    borderRadius: 10,
+     marginBottom: 10, 
+     flexDirection: 'row', 
+     alignItems: 'center'
+    },
+  noteTitle: { 
+    fontSize: 17, 
+    fontWeight: 'bold', 
+    color: '#333' 
+  },
+  noteDesc: { 
+    fontSize: 14, 
+    color: '#666', 
+    marginTop: 5 
+  },
+  noteDate: { 
+    fontSize: 11, 
+    color: '#aaa', 
+    marginTop: 8 
+  },
 });
 
 export default NoteView;
