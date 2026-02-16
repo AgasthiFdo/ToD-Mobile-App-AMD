@@ -11,14 +11,14 @@ const tabs = [
   { name: "news", icon: "article", title: "News" }
   
 ] as const
-// DRY - Don't Repeat Yourself
+
 const DashboardLayout = () => {
   return (
     <Tabs
       screenOptions={{
         headerShown: false
       }}
-      // tabBar={(props) => <></>}
+      
     >
       {tabs.map((tab) => (
         <Tabs.Screen
